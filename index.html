@@ -1,547 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MindPal 3D Experience & Infinite Animation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-  <link rel="stylesheet" href="home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindPal - Your Ultimate Therapeutic Companion</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  
-  <style>
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
+<body class="bg-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-indigo-400">MindPal</div>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="#features" class="text-gray-300 hover:text-indigo-400">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-indigo-400">About</a>
+                    <a href="product.html" class="text-gray-300 hover:text-indigo-400">Product</a>
+                    <a href="mha.html" class="text-gray-300 hover:text-indigo-400">Take MHA Screening</a>
+                    <a href="premium.html" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">
+                        Premium
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333333;
-    padding: 10px 40px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    max-width: 100%; /* Ensures the navbar spans the full width */
-    position: fixed; /* Keeps the navbar fixed at the top */
-    top: 0;
-    margin-top: 10;
-    left: 0;
-    right: 0; /* Ensures it stretches to the right edge */
-    z-index: 1000; /* Ensures it stays above other content */
-    box-sizing: border-box; /* Ensures padding is included in the width */
-}
-
-    .navbar-brand {
-        color: #ecf0f1;
-        font-size: 26px;
-        font-weight: bold;
-        text-decoration: none;
-        letter-spacing: 1px;
-    }
-
-    .navbar-nav {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav-item {
-        margin-left: 30px;
-    }
-
-    .nav-link {
-        color: #ecf0f1;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
-
-    .nav-link:hover {
-        color: #3498db;
-    }
-
-    .search-bar {
-        display: flex;
-        align-items: center;
-    }
-
-    .search-bar input {
-        padding: 8px;
-        border: none;
-        border-radius: 4px;
-        font-size: 14px;
-        width: 200px;
-        transition: width 0.3s ease;
-    }
-
-    .search-bar input:focus {
-        width: 250px;
-        outline: none;
-    }
-
-    .search-bar button {
-        background-color: #555555;
-        border: none;
-        color: #fff;
-        padding: 8px 15px;
-        margin-left: 10px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 14px;
-        transition: background-color 0.3s ease;
-    }
-
-    .search-bar button:hover {
-        background-color: #2980b9;
-    }
-
-    .content {
-        padding-top: 80px; /* To account for the fixed navbar */
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-</style>
-</head>
-<body>
-<nav class="navbar">
-    <a href="#" class="navbar-brand">MindPal</a>
-    <ul class="navbar-nav">
-        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
-        <li class="nav-item"><a href="mha.html" class="nav-link">Tests</a></li>
-        <li class="nav-item"><a href="#" class="nav-link premium">Premium</a></li>
-
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" style="font-size: 1.4rem;"   id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-circle-user"></i> 
-          </a>
-          
-      </li>
-    </ul>
-
-    
-    
-</nav>
-
-  <section class="hero">
-  
-    <div class="hero-text">
-      <h1 style="color: black;">Experience Serenity with MindPal's Innovative Device</h1>
-      <p style="color: black;">Discover the perfect blend of technology and tradition with MindPal. Our wearable device harnesses the power of soothing slokas and gentle massage to melt away stress and promote relaxation.</p>
-      <div class="hero-buttons">
-        <a href="#" class="learn-more" style="color: black;">Learn More</a>
+    <!-- Hero Section -->
+    <div class="relative bg-gray-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-gray-900 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+                            <span class="block">Your Ultimate</span>
+                            <span class="block text-indigo-400">Therapeutic Companion</span>
+                        </h1>
+                        <p class="mt-3 text-base text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Experience the perfect blend of VR relaxation and therapeutic massage. MindPal helps you achieve peace of mind through innovative technology.
+                        </p>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-md shadow">
+                                <a href="#order" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 md:py-4 md:text-lg md:px-10">
+                                    Get Started
+                                </a>
+                            </div>
+                            <div class="mt-3 sm:mt-0 sm:ml-3">
+                                <a href="#learn-more" class="w-full flex items-center justify-center px-8 py-3 border border-indigo-500 text-base font-medium rounded-md text-indigo-300 hover:bg-indigo-900 transition duration-300 md:py-4 md:text-lg md:px-10">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 lg:h-full" src="PRODUCT LOGO.png" alt="MindPal Device">
+        </div>
         
-      </div>
+        
     </div>
 
-    
-  </section>
-  <iframe src="https://my.spline.design/particleaibrain-3fe3dfbd5c7aafbbb694397542ad34a1/" 
-  width="100%" height="600" 
-  margin top:10px
-  frameborder="0" 
-  style="position:absolute; width:100%; height:500; border:none;margin-top:75px"></iframe>
+    <!-- Features Section -->
+    <div class="py-12 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-400 font-semibold tracking-wide uppercase">Features</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                    A Better Way to Find Peace
+                </p>
+            </div>
 
- 
-  <div class="pic">
-    <div class="pic1">
-      <div class="smallpic1"></div><br>
-      <div class="smallpic2"></div><br>
-      <div class="smallpic3"></div>
-    </div>
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+                    <!-- VR Feature -->
+                    <div class="relative p-6 bg-gray-900 rounded-xl shadow-md">
+                        <div class="absolute -top-4 left-4">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-lg font-medium text-white">VR Relaxation</h3>
+                            <p class="mt-2 text-gray-400">
+                                Immersive virtual reality experiences designed to calm your mind and reduce stress.
+                            </p>
+                        </div>
+                    </div>
 
-    <div class="pic2">
-      <div class="smallpic4"></div><br>
-      <div class="smallpic5"></div><br>
-      <div class="smallpic6"></div>
-    </div>
-  </div>
+                    <!-- Massage Feature -->
+                    <div class="relative p-6 bg-gray-900 rounded-xl shadow-md">
+                        <div class="absolute -top-4 left-4">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-lg font-medium text-white">Therapeutic Massage</h3>
+                            <p class="mt-2 text-gray-400">
+                                Built-in eye and head massager targeting key pressure points for maximum relaxation.
+                            </p>
+                        </div>
+                    </div>
 
-  
-
-<br><br><br><br>
-  <div class="bigcontainer">
-    <div class="bigpic1" >
-       
-    </div>
-    <div class="container">
-      <br>
-      <header>
-        <h1 class="animated-title">Experience the Future of Mental Wellness</h1>
-        <p class="animated-description">MindPal seamlessly blends cutting-edge technology with ancient mindfulness 
-          practices to deliver an unparalleled relaxation experience. Utilizing immersive VR environments and soothing 
-          Hindu mantras, MindPal helps you achieve deep mental tranquility and rejuvenation.
-
-        </p>
-      </header>
-      <br>
-      <div class="features">
-        <div class="feature-card card-animated">
-          <h3>Innovative Technology</h3>
-          <p>Harness the power of virtual reality and intelligent soundscapes for holistic relaxation and stress relief.</p>
+                    <!-- Assessment Feature -->
+                    <div class="relative p-6 bg-gray-900 rounded-xl shadow-md">
+                        <div class="absolute -top-4 left-4">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-lg font-medium text-white">Mental Health Assessment</h3>
+                            <p class="mt-2 text-gray-400">
+                                Professional MHA screening tools to track and improve your mental well-being.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="feature-card card-animated">
-          <h3>Cultural Harmony</h3>
-          <p>Connect with age-old traditions through calming mantras, promoting mindfulness and inner peace.</p>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-indigo-900">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                <span class="block">Ready to find your peace?</span>
+                <span class="block text-indigo-300">Start your journey with MindPal today.</span>
+            </h2>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                <div class="inline-flex rounded-md shadow">
+                    <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-indigo-400 hover:bg-indigo-300 transition duration-300">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="button-group">
-        <a href="#" class="button">Learn More</a>
-        <a href="#" class="button">Get Started</a>
-      </div>
     </div>
-  </div>
-  
 
-
-  <div class="mindpal-features">
-    <div class="mindpal-card feature-vr">
-        <h1>Immersive VR Relaxation</h1>
-        <p>Mindpal transports users to serene virtual environments, helping them 
-            escape daily stressors. The immersive VR experience is designed to calm 
-            the mind and reduce anxiety, promoting overall mental well-being.</p>
-    </div>
-    <div class="mindpal-card feature-massage">
-        <h1>Head Massage</h1>
-        <p>The integrated massager targets key pressure points around the head, alleviating 
-          tension and stress. This promotes relaxation and helps users achieve a state of calm more effectively..</p>
-    </div>
-    <div class="mindpal-card feature-mha">
-        <h1>MHA Screening Test</h1>
-        <p>Mindpal includes a Mental Health Assessment (MHA) screening test accessible
-            via the companion website. This tool helps users evaluate their mental health
-            and provides insights, making it easier to seek help if needed.</p>
-    </div>
-</div>
-
-
-  
-    <style>
-      .slider-container {
-          position: relative;
-          height: 200px;
-          overflow: hidden;
-          margin: 20px auto;
-          width: 80%;
-      }
-      
-      .review-box {
-          position: absolute;
-          width: 100%;
-          
-          padding: 20px;
-          background: #f8f9fa;
-          border-radius: 10px;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-          opacity: 0;
-          animation: slideInOut 25s infinite linear;
-      }
-      
-      @keyframes slideInOut {
-          0% {
-              transform: translateX(100%);
-              opacity: 0;
-          }
-          5% {
-              transform: translateX(0);
-              opacity: 1;
-          }
-          20% {
-              transform: translateX(0);
-              opacity: 1;
-          }
-          25% {
-              transform: translateX(-100%);
-              opacity: 0;
-          }
-          100% {
-              transform: translateX(-100%);
-              opacity: 0;
-          }
-      }
-      
-      .review-box:nth-child(1) { animation-delay: 0s; }
-      .review-box:nth-child(2) { animation-delay: 5s; }
-      .review-box:nth-child(3) { animation-delay: 10s; }
-      .review-box:nth-child(4) { animation-delay: 15s; }
-      .review-box:nth-child(5) { animation-delay: 20s; }
-      </style>
-      </head>
-      <body>
-      <p style="color: white; margin-left: 50px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 
-      'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 2.5rem;">Customer Review</p><br>
-      <section class="community-section">
-        <div class="avatars">
-            <img src="cus1.png" alt="User 1">
-            <img src="cus2.png" alt="User 2">
-            <img src="cust3.png" alt="User 3">
-            <img src="cus4.jpeg" alt="User 4">
-            <img src="cus5.png" alt="User 5">
-            <img src="cus6.png" alt="User 6">
-        </div>
-        <h2>Join our vibrant community</h2>
-        <div class="buttons">
-          <button class="join-btn" onclick="window.open('https://linktr.ee/mindpal25', '_blank')">🧘 Join Mindpal Community</button>
-
-            <button class="review-btn">Read user experiences</button>
-        </div>
-    </section>
-    <style>
-      /* Chat button styling */
-      #chat-button {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          z-index: 1000;
-      }
-
-      #chat-button div {
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          background-color: #002b5c;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-      }
-
-      #chat-button div:hover {
-          background-color: #004080; /* Slightly lighter on hover */
-      }
-
-      #chat-button img {
-          width: 30px;
-          height: 30px;
-      }
-
-      /* Chatbot container styling */
-      #chatbot-container {
-          display: none;
-          position: fixed;
-          bottom: 90px;
-          right: 20px;
-          width: 400px;
-          height: 600px;
-          z-index: 1000;
-          border-radius: 12px;
-          overflow: hidden;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
-      }
-
-      #chatbot-container iframe {
-          width: 100%;
-          height: 100%;
-          border: none; /* Remove iframe border */
-      }
-  </style>
-</head>
-<body>
-  <!-- Chat Button -->
-  <div id="chat-button">
-      <div>
-          <img src="icons8-chat-50.png" alt="Chat Icon">
-      </div>
-  </div>
-
-  <!-- Chatbot Container -->
-  <div id="chatbot-container">
-      <iframe src="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/17/03/20250217030619-PB4Z3EPI.json"></iframe>
-  </div>
-
-  <script>
-      // Toggle chatbot visibility
-      const chatButton = document.getElementById('chat-button');
-      const chatbotContainer = document.getElementById('chatbot-container');
-      let chatVisible = false;
-
-      chatButton.addEventListener('click', () => {
-          chatVisible = !chatVisible;
-          chatbotContainer.style.display = chatVisible ? 'block' : 'none';
-      });
-  </script>
-      
-      
-      </body>
-    
-    
-  </div>
-  
-  
-  
-  <footer class="footer">
-    <div class="footer-container">
-      <!-- Quick Links -->
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="mha.html">Tests</a></li>
-          <li><a href="#">Premium</a></li>
-          <li><a href="#">Accounts</a></li>
-        </ul>
-      </div>
-  
-      <!-- Contact Information -->
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <ul>
-          <li><strong>Email:</strong> <a href="mindpal2025@gmail.com">mindpal2025@gmail.com</a></li>
-          <li><strong>Address: </strong> Ashram Building, GN-34/2, Sector – V, Saltlake Electronics Complex
-            Kolkata – 700 091, West Bengal, India</li>
-        </ul>
-      </div>
-  
-      <!-- Social Media -->
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <a href="https://www.facebook.com/share/18nk7hRc8k/" target="_blank">
-          <img src="https://img.icons8.com/color/50/000000/facebook.png" alt="Facebook">
-      </a>
-      <a href="https://x.com/mindpal2025" target="_blank">
-          <img src="https://img.icons8.com/color/50/000000/twitter.png" alt="Twitter">
-      </a>
-      <a href="https://www.instagram.com/mindpal2025?igsh=MWU0OHd4cDQ5dWp4dw==" target="_blank">
-          <img src="https://img.icons8.com/color/50/000000/instagram-new.png" alt="Instagram">
-      </a>
-      <a href="https://www.linkedin.com/company/mindpal1/" target="_blank">
-          <img src="https://img.icons8.com/color/50/000000/linkedin.png" alt="LinkedIn">
-      </a>
-      
-      </div>
-  
-      <!-- Newsletter Subscription -->
-      <div class="footer-section">
-        <h3>Subscribe to Our Newsletter</h3>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-    </div>
-  
-    <!-- Copyright Notice -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 MindPal. All rights reserved.</p>
-    </div>
-  </footer>
-  
-  <style>
-    /* Footer Styling */
-    .footer {
-      background-color: #1a1a1a;
-      width: 100%;
-      color: #ecf0f1;
-      padding: 40px 20px;
-      margin-top: 60px;
-      
-    }
-  
-    .footer-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      gap: 20px;
-    }
-  
-    .footer-section {
-      flex: 1;
-      min-width: 200px;
-      margin-bottom: 20px;
-    }
-  
-    .footer-section h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 15px;
-      color: #fefff6;
-    }
-  
-    .footer-section ul {
-      list-style: none;
-      padding: 0;
-    }
-  
-    .footer-section ul li {
-      margin-bottom: 10px;
-    }
-  
-    .footer-section ul li a {
-      color: #ecf0f1;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-  
-    .footer-section ul li a:hover {
-      color: #3498db;
-    }
-  
-    .social-icons {
-      display: flex;
-      gap: 15px;
-    }
-  
-    .social-icons img {
-      width: 24px;
-      height: 24px;
-      transition: transform 0.3s ease;
-    }
-  
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-  
-    .newsletter-form {
-      display: flex;
-      gap: 10px;
-    }
-  
-    .newsletter-form input {
-      padding: 8px;
-      border: none;
-      border-radius: 4px;
-      font-size: 14px;
-      flex: 1;
-    }
-  
-    .newsletter-form button {
-      background-color: #3498db;
-      border: none;
-      color: #fff;
-      padding: 8px 15px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: background-color 0.3s ease;
-    }
-  
-    .newsletter-form button:hover {
-      background-color: #2980b9;
-    }
-  
-    .footer-bottom {
-      text-align: center;
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid #444;
-      font-size: 14px;
-      color: #bdc3c7;
-    }
-  </style>
-
-</body>
-
-</html>
+   
+            <footer class="footer">
+                <div class="footer-container">
+                  <!-- Quick Links -->
+                  <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Products</a></li>
+                      <li><a href="mha.html">Tests</a></li>
+                      <li><a href="#">Premium</a></li>
+                      <li><a href="#">Accounts</a></li>
+                    </ul>
+                  </div>
+              
+                  <!-- Contact Information -->
+                  <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                      <li><strong>Email:</strong> <a href="mindpal2025@gmail.com">mindpal2025@gmail.com</a></li>
+                      <li><strong>Address: </strong> Ashram Building, GN-34/2, Sector – V, Saltlake Electronics Complex
+                        Kolkata – 700 091, West Bengal, India</li>
+                    </ul>
+                  </div>
+              
+                  <!-- Social Media -->
+                  <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.facebook.com/share/18nk7hRc8k/" target="_blank">
+                      <img src="https://img.icons8.com/color/50/000000/facebook.png" alt="Facebook">
+                  </a>
+                  <a href="https://x.com/mindpal2025" target="_blank">
+                      <img src="https://img.icons8.com/color/50/000000/twitter.png" alt="Twitter">
+                  </a>
+                  <a href="https://www.instagram.com/mindpal2025?igsh=MWU0OHd4cDQ5dWp4dw==" target="_blank">
+                      <img src="https://img.icons8.com/color/50/000000/instagram-new.png" alt="Instagram">
+                  </a>
+                  <a href="https://www.linkedin.com/company/mindpal1/" target="_blank">
+                      <img src="https://img.icons8.com/color/50/000000/linkedin.png" alt="LinkedIn">
+                  </a>
+                  
+                  </div>
+              
+                  <!-- Newsletter Subscription -->
+                  <div class="footer-section">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <form class="newsletter-form">
+                      <input type="email" placeholder="Enter your email" required>
+                      <button type="submit">Subscribe</button>
+                    </form>
+                  </div>
+                </div>
+              
+                <!-- Copyright Notice -->
+                <div class="footer-bottom" >
+                  <p>&copy; 2025 MindPal. All rights reserved.</p>
+                </div>
+              </footer>
+              
+              <style>
+                /* Footer Styling */
+                .footer {
+                  background-color: #1a1a1a;
+                  width: 100%;
+                  color: #ecf0f1;
+                  padding: 40px 20px;
+                  margin-top: 60px;
+                  
+                }
+              
+                .footer-container {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: space-between;
+                  max-width: 1200px;
+                  margin: 0 auto;
+                  gap: 20px;
+                }
+              
+                .footer-section {
+                  flex: 1;
+                  min-width: 200px;
+                  margin-bottom: 20px;
+                }
+              
+                .footer-section h3 {
+                  font-size: 18px;
+                  font-weight: 600;
+                  margin-bottom: 15px;
+                  color: #fefff6;
+                }
+              
+                .footer-section ul {
+                  list-style: none;
+                  padding: 0;
+                }
+              
+                .footer-section ul li {
+                  margin-bottom: 10px;
+                }
+              
+                .footer-section ul li a {
+                  color: #ecf0f1;
+                  text-decoration: none;
+                  transition: color 0.3s ease;
+                }
+              
+                .footer-section ul li a:hover {
+                  color: #3498db;
+                }
+              
+                .social-icons {
+                  display: flex;
+                  gap: 15px;
+                }
+              
+                .social-icons img {
+                  width: 24px;
+                  height: 24px;
+                  transition: transform 0.3s ease;
+                }
+              
+                .social-icons img:hover {
+                  transform: scale(1.2);
+                }
+              
+                .newsletter-form {
+                  display: flex;
+                  gap: 10px;
+                }
+              
+                .newsletter-form input {
+                  padding: 8px;
+                  border: none;
+                  border-radius: 4px;
+                  font-size: 14px;
+                  flex: 1;
+                }
+              
+                .newsletter-form button {
+                  background-color: #3498db;
+                  border: none;
+                  color: #fff;
+                  padding: 8px 15px;
+                  border-radius: 4px;
+                  cursor: pointer;
+                  font-size: 14px;
+                  transition: background-color 0.3s ease;
+                }
+              
+                .newsletter-form button:hover {
+                  background-color: #2980b9;
+                }
+              
+                .footer-bottom {
+                  text-align: center;
+                  margin-top: 20px;
+                  padding-top: 20px;
+                  border-top: 1px solid #444;
+                  font-size: 14px;
+                  color: #bdc3c7;
+                }
+              </style>
+            
+            </body>
+            
+            </html>
+            
+              
